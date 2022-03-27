@@ -65,7 +65,7 @@ app.use('/users', usersRouter);
 app.use('/todos', todosRouter);
 app.use('/animals', animalsRouter);
 app.use('/account', accountRouter);
-app.use('/birds', accountRouter);
+app.use('/birds', birdsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
