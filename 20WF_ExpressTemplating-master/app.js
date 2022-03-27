@@ -12,12 +12,10 @@ var session      = require('express-session');
 
 
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var todosRouter = require('./routes/create');
-var animalsRouter = require('./routes/animals');
-var accountRouter = require('./routes/accounts');
-var birdsRouter = require('./birds/accounts');
+
+
+var createRouter = require('./routes/create');
+var birdsRouter = require('./routes/birds');
 
 
 var app = express();
@@ -60,11 +58,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/todos', todosRouter);
-app.use('/animals', animalsRouter);
-app.use('/account', accountRouter);
+
+app.use('/create', createRouter);
 app.use('/birds', birdsRouter);
 
 // catch 404 and forward to error handler
