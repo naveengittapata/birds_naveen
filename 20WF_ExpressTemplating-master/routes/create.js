@@ -4,16 +4,16 @@ var axios = require('axios');
 
 
 router.get('/', function(req, res, next){
-    axios.get('https://jsonplaceholder.typicode.com/todos/')
+    axios.get('https://jsonplaceholder.typicode.com/create /')
      .then(function (response){
         console.log(response.data);
-        response.render('todos/todos',{todos:response.data});
+        response.render('create/create',{todos:response.data});
       })
     
     });
 
     router.get('/create', function(req, res, next){
-       res.render('todos/create');
+       res.render('birds/create');
         
         });
 
